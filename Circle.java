@@ -1,34 +1,22 @@
 
-public class Circle {
-private double radius;
-public Circle() {
-	this.radius =1.0;
-	
-}
+
+public class Circle implements GeometricObject{
+protected double radius;
 public Circle(double radius) {
 	this.radius = radius;
+}
+@Override
+public String toString() {
+	return "Circle3 [radius=" + radius + "]";
+}
+@Override
+public double getArea() {
 	
-}
-public double getRadius() {
-	return radius;
-}
-public void setRadius(double radius) {
-	this.radius = radius;
+	return Math.PI*this.radius*this.radius ;
 }
 
-
-public String toString()
-{
-	return "Circle[radius="+this.radius+"]";
-}
-public double getArea()
-{
-	return this.radius*this.radius*Math.PI;
-}
-public double getCircumference()
-{
-    return this.radius*2*Math.PI;
-
+@Override
+public double getPerimeter() {
+	return 2*Math.PI*this.radius;
 }
 }
-
