@@ -1,30 +1,32 @@
 
 
 public class Customer {
-private int id;
 private String name;
-private char gender;
-public Customer(int id, String name, char gender) {
+private boolean member;
+private String type;
+public Customer(String name) {
 	super();
-	this.id = id;
 	this.name = name;
-	this.gender = gender;
+	this.member=false;
 }
-public int getId() {
-	return id;
-}
-
 public String getName() {
 	return name;
 }
-
-public char getGender() {
-	return gender;
+public void setName(String name) {
+	this.name = name;
+}
+public boolean isMember() {
+	return member;
+}
+public void setMember(boolean member) {
+	this.member = member;
+}
+public String getType() {
+	return type;
+}
+public void setType(String type) {
+	this.type = type;
 }
 
-@Override
-public String toString() {
-	return name+"("+id+")";
-}
 
 }
